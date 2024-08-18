@@ -1,5 +1,6 @@
 export type Todo = {
+    id:string
     label:string
-    status:"Pending"|"Doing"|"Done"
+    status:"Padding"|"Doing"|"Done"
     description:string
 }
