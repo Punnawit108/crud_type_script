@@ -13,15 +13,15 @@ const Content = () => {
   }, [getTodo]);
 
   return (
-    <div>
-      <h1 className="mb-4 text-center">
+    <div >
+      <h1 className="mb-4 text-2xl font-bold text-center">
         Todo
         <Link to="/add">
-          <span className="float-right p-1 border border-white rounded-x1">Add Todo</span>
+          <span className="float-right p-1 font-bold border border-black rounded-xl">Add Todo</span>
         </Link>
       </h1>
       
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-10 ">
         {todo.map((item) => (
           <Link
             key={item.id}

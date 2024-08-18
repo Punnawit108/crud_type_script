@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Todo } from "../types/todo";
 
 const Edit = () => {
-  const { register, handleSubmit, setValue } = useForm<Todo>(); 
+  const { register, handleSubmit, setValue } = useForm<Todo>();  
   const { editTodo, deleteTodo } = useTodoStore();
   const { todoData } = useTodoContext();
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Edit = () => {
     const parsedTodoData = storedTodoData ? JSON.parse(storedTodoData) : null;
     
     console.log(todoData?.id)
-    if (todoData) {
+    if (todoData) { 
       localStorage.setItem("todoData", JSON.stringify(todoData));
       setValue("id", todoData.id);
       setValue("label", todoData.label);
